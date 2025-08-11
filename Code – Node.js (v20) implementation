@@ -1,0 +1,17 @@
+Project layout
+
+trending-news/
+│
+├─ src/
+│   ├─ fetch_trending.js          # main script (run by scheduler)
+│   ├─ news_api.js                # thin wrapper around NewsAPI
+│   ├─ scorer.js                  # simple trending‑score algorithm
+│   ├─ seo_builder.js             # creates HTML + JSON‑LD
+│   └─ publisher/
+│        ├─ static_publisher.js   # writes markdown files for Hugo/Jekyll
+│        └─ wp_publisher.js       # pushes via WP REST API
+│
+├─ .env                           # store API keys & config (do NOT commit)
+├─ package.json
+├─ Dockerfile
+└─ README.md
